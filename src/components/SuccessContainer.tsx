@@ -54,8 +54,10 @@ const SuccessContainer = ({ id }: { id: string }) => {
     if (session?.user && cart.length) {
       handleSaveOrder();
     }
-  },   [session?.user, cart?.length]);
-    return (
+     ([session?.user, cart?.length]);
+  });
+  
+  return (
     <div>
       {loading ? (
         <Loader
