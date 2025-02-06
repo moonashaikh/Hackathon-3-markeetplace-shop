@@ -8,13 +8,13 @@ import ProductInfo from "@/components/ProductInfo";
 import { getBestSellersData } from "@/lib/getData";
 import ProductCard from "@/components/ProductCard";
 
-interface Props {
+interface PageProps {
   params: {
     slug: string;
   };
 }
 
-const SingleProductPage = async ({ params: { slug } }: Props) => {
+const SingleProductPage = async ({ params: { slug } }: PageProps) => {
   const query = groq`*[_type == 'product' && slug.current == $slug][0]{
         ...
       }`;
